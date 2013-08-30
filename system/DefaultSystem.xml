@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<rts:RtsProfile rts:abstract="RT System created by rtcryo." rts:creationDate="2013-08-30T17:33:20" rts:id="RTSystem :Sugar Sweet Robotics.DefaultSystem01.1.0" rts:updateDate="2013-08-30T17:33:20" rts:version="0.2" xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rts:Components rts:compositeType="None" rts:id="RTC:Sugar Sweet Robotics:Tutorial:ConsoleInput:1.0.0" rts:instanceName="ConsoleInput0" rts:isRequired="true" rts:pathUri="localhost/ConsoleInput0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="out" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e300000000001000000000000006800000001010200100000003139322e3136382e3137302e32303000fa0a00000e000000fec65820520000f869000000000400000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100"/>
+    </rts:Components>
+    <rts:Components rts:activeConfigurationSet="default" rts:compositeType="None" rts:id="RTC:ysuga.net:Test:RTnoProxy:1.0.0" rts:instanceName="RTnoProxy0" rts:isRequired="true" rts:pathUri="localhost/RTnoProxy0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="in0" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="23" rts:name="portNumber"/>
+            <rts:ConfigurationData rts:data="57600" rts:name="baudrate"/>
+            <rts:ConfigurationData rts:data="192.168.42.100" rts:name="ipAddress"/>
+            <rts:ConfigurationData rts:data="/dev/cu.usbserial-A800KDI2" rts:name="comport"/>
+            <rts:ConfigurationData rts:data="serial" rts:name="connectionType"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e300000000001000000000000006800000001010200100000003139322e3136382e3137302e32303000fa0a00000e000000fec65820520000f869000000000000000200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100"/>
+    </rts:Components>
+    <rts:DataPortConnectors rts:connectorId="1F43F6AC-4B46-45D0-A63A-0FCFEFC41A1D" rts:dataType="IDL:RTC/TimedLong:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="in0out" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:ConsoleInput:1.0.0" rts:instanceName="ConsoleInput0" rts:portName="ConsoleInput0.out">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/ConsoleInput0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:ysuga.net:Test:RTnoProxy:1.0.0" rts:instanceName="RTnoProxy0" rts:portName="RTnoProxy0.in0">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/manager_cpp.mgr/RTnoProxy0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedLong:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+</rts:RtsProfile>

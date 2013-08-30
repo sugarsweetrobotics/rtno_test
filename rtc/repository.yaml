@@ -1,0 +1,6 @@
+ConsoleInput: {description: '', git: 'https://github.com/sugarsweetrobotics/ConsoleInput_cpp.git',
+  hash: dc71222149bc685b6ce4905c6ac462d7d6b600d6}
+LEDTest: {description: '', git: 'https://github.com/sugarsweetrobotics/LEDTest.git',
+  hash: 4ae294a8cb78a4f5ca82ef9fb72e2e31bcaf395f}
+RTnoProxy: {description: '', git: 'https://github.com/sugarsweetrobotics/RTnoProxy.git',
+  hash: 6c5867e030b694c7c0d73fdad3efc7832e11bde4}
